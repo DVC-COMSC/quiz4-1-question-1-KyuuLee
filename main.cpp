@@ -1,5 +1,3 @@
-// Complete this program
-
 #include <iostream>
 using namespace std;
 
@@ -17,9 +15,30 @@ int main()
 	cout << "Enter your choice (1-4): ";
 	cin >> choice;
 
-        //************************
-        // Your code 
-        //************************
-        
-        cout << area << endl;
+	switch (choice)
+	{
+	case 1:
+		cout << "Enter the radius: ";
+		cin >> radius;
+		area = 3.14 * radius * radius;
+		break;
+	case 2:
+		cout << "Enter the width and height";
+		cin >> width >> height;
+		area = width * height;
+		break;
+	case 3:
+		cout << "Enter the width and height";
+		cin >> width >> height;
+		area = width * height * 0.5;
+		break;
+	case 4:
+		cout << "Program Stopped";
+		return 0;
+		break;
+	default:
+		cout << "Wrong Number\n";
+		return 0;
+	}
+	cout << area << endl;
 }
